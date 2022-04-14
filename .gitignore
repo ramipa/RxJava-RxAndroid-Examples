@@ -13,6 +13,7 @@
 .externalNativeBuild
 
 # Soulivanh
+./idea
 .idea/compiler.xml
 .idea/jarRepositories.xml
 .idea/runConfigurations.xml
