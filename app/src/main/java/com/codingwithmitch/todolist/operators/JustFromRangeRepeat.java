@@ -2,8 +2,6 @@ package com.codingwithmitch.todolist.operators;
 
 import android.util.Log;
 
-import com.codingwithmitch.todolist.models.Task;
-
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -43,7 +41,7 @@ public class JustFromRangeRepeat {
                 });
 
 
-        Observable.range(0,11)
+        Observable.range(0, 11)
                 .observeOn(Schedulers.io())
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<Integer>() {

@@ -5,24 +5,17 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.codingwithmitch.todolist.models.Task;
-import com.codingwithmitch.todolist.util.DataSource;
-
-
-import java.util.List;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.codingwithmitch.todolist.models.Task;
+import com.codingwithmitch.todolist.util.DataSource;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Function;
-import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView text;
 
     // vars
-    private CompositeDisposable disposables = new CompositeDisposable();
+    private final CompositeDisposable disposables = new CompositeDisposable();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Observable.range(0,3)
+        Observable.range(0, 3)
                 .repeat(2)
                 .observeOn(Schedulers.io())
                 .subscribeOn(AndroidSchedulers.mainThread())

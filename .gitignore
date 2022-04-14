@@ -11,3 +11,11 @@
 /build
 /captures
 .externalNativeBuild
+
+# Soulivanh
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/runConfigurations.xml
+.idea/vcs.xml
+.idea/gradle.xml
+.idea/misc.xml
